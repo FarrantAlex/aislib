@@ -1,6 +1,15 @@
 aislib
 ======
 
+AIS simulator with multi-threading.
+This script will simulate a vessel travelling clockwise around a centre point.
+The centre-point, radius and message rate are specified in the header.
+
+Server: python3 playtrack.py
+
+Client: nc localhost 2001
+
+
 A Python library for decoding and encoding: 
  * AIS type 1 messages
  * AIS type 5 messages

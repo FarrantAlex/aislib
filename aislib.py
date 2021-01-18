@@ -62,7 +62,7 @@ class AISMessage(object):
     
     def __init__(self, elements):
         # Init our bit mapping and load up default message values
-        for key, arr in elements.iteritems():
+        for key, arr in elements.items():
             # arr[0] == data type of the element
             # arr[1] == number of bits for given element
             # arr[2] == the default value for the element
@@ -91,8 +91,7 @@ class AISMessage(object):
         """
         We are overriding the __setattr__ to implement dynamic property "setters".
         """
-        
-        if type(value) not in [ int,long]:
+        if type(value) is not int:
             raise TypeError("Value must be an integer.")
             
         if name == "_bitmap":
